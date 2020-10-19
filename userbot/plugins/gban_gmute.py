@@ -22,7 +22,7 @@ async def get_full_user(event):
         if user.isnumeric():
             user = int(user)
         if not user:
-            await event.edit("`User ID Is Required")
+            await event.edit("`User ID is required.")
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -34,7 +34,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("Something Went Wrong", str(err))           
+            return await event.edit("Something went wrong.", str(err))           
     return user_obj, extra
 
 
@@ -54,11 +54,11 @@ async def gspider(userbot):
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("Gbanning This User !")
+        friday = await lol.reply("Gbanning This User!")
     else:
         friday = await lol.edit("Wait Processing.....")
     me = await userbot.client.get_me()
-    await friday.edit(f"Global Ban Is Coming ! Wait And Watch You Nigga")
+    await friday.edit(f"Global Ban is coming. Please wait...")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -76,7 +76,8 @@ async def gspider(userbot):
         if not reason:
             reason = "Private"
     except:
-        return await friday.edit(f"**Something W3NT Wrong 🤔**")
+        return await friday.edit(f"**Something went wrong.
+ 🤔**")
     if user:
         if user.id == 1263617196:
             return await friday.edit(
