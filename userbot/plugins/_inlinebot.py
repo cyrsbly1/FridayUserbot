@@ -157,7 +157,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         him_id = event.query.user_id
         await event.edit("Choice Accepted ✔️")
         text2 = (
-            "Ok. Please wait until Ryujin approves. Don't spam or try anything. \nThank you for contacting Me."
+            "Ok. Please wait until Ryujin approves. Don't spam or try anything. Thank you for contacting Me."
         )
         await borg.send_message(event.query.user_id, text2)
         await tgbot.send_message(LOG_CHAT, message=f"Hello, A [New User](tg://user?id={him_id}). Wants To Talk With You.",
