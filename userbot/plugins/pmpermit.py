@@ -31,8 +31,7 @@ USER_BOT_WARN_ZERO = "You have attempted to spam Master's inbox, so inorder to a
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
     "**Hello, This is Ryujin's PM Protection Service ⚠️**\n\n"
-    f"`{DEFAULTUSER} is Busy Right Now !` \n"
-    "**I request you to choose a reason You have came for** 👀 \n\n"
+    "**I request you to choose a reason you have came for** 👀 \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**")
 
 if Var.PRIVATE_GROUP_ID is not None:
