@@ -41,10 +41,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     [custom.Button.inline("Show Stats ", data="terminator")],
                     [
                         Button.url(
-                            "Repo 🇮🇳",
-                            "https://github.com/StarkGang/FridayUserbot")
+                            "WW Jollibee",
+                            "https://t.me/wwjollibee")
                     ],
-                    [Button.url("Join Channel ❤️", "t.me/Fridayot")],
+                    [Button.url("Join Channel ❤️", "t.me/wwjollibeedumps")],
                 ],
             )
         if event.query.user_id == bot.uid and query.startswith("**Hello"):
@@ -53,16 +53,16 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 text=query,
                 buttons=[
                     [
-                        custom.Button.inline("❌ I Am Here For Spamming ❌ ",
-                                             data="dontspamnigga")
+                        custom.Button.inline("⬇️ Choices ⬇️ ",
+                                             data="-")
                     ],
                     [
                         custom.Button.inline(
-                            "🛡️ I Am Here For Talking With Your Master 🛡️",
+                            "🛡️ Talk to Ryujin 🛡️",
                             data="whattalk")
                     ],
                     [
-                        custom.Button.inline("🙏 I Am Here For Asking Something 🙏",
+                        custom.Button.inline("🙏 Ask Ryujin 🙏",
                                              data="askme")
                     ],
                 ],
@@ -139,15 +139,15 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             text = inlinestats
             await event.answer(text, alert=True)
         else:
-            txt = "You Can't View My Masters Stats"
+            txt = "You can't view Ryujin's stats"
             await event.answer(txt, alert=True)
 
     @tgbot.on(
         events.callbackquery.CallbackQuery(data=re.compile(b"dontspamnigga")))
     async def rip(event):
         chat_k = await event.get_chat()
-        text1 = "You Have Chosed A Probhited Option. Therefore, You Have Been Blocked By UserBot. 🇮🇳"
-        await event.edit("Choice Not Accepted ❌")
+        text1 = "You have chosed a probhited option. Therefore, **You Have Been Blocked By UserBot.**"
+        await event.edit("Choice not accepted ❌")
         await borg.send_message(event.query.user_id, text1)
         await borg(functions.contacts.BlockRequest(event.query.user_id))
 
@@ -157,7 +157,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         him_id = event.query.user_id
         await event.edit("Choice Accepted ✔️")
         text2 = (
-            "Ok. Please Wait Until My Master Approves. Don't Spam Or Try Anything Stupid. \nThank You For Contacting Me."
+            "Ok. Please wait until Ryujin approves. Don't spam or try anything. \nThank you for contacting Me."
         )
         await borg.send_message(event.query.user_id, text2)
         await tgbot.send_message(LOG_CHAT, message=f"Hello, A [New User](tg://user?id={him_id}). Wants To Talk With You.",
@@ -173,7 +173,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def rip(event):
         chat_s = await event.get_chat()
         await event.edit("Choice Accepted ✔️")
-        text3 = "Ok, Wait. You can Ask After Master Approves You. Kindly, Wait."
+        text3 = "Ok, wait. You can ask after Ryujin approves You. Please wait."
         await borg.send_message(event.query.user_id, text3)
 
 
