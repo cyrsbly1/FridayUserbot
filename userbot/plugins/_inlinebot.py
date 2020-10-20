@@ -53,7 +53,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 text=query,
                 buttons=[
                     [
-                        custom.Button.inline("⬇️ Choices ⬇️ ",
+                        custom.Button.inline("⬇️ RYUJIN'S USERBOT ⬇️ ",
                                              data="-")
                     ],
                     [
@@ -62,8 +62,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                             data="whattalk")
                     ],
                     [
-                        custom.Button.inline("🙏 Ask Ryujin 🙏",
-                                             data="askme")
+                        custom.Button.inline("Join Werewolf Jollibee",
+                                             data="wwjollibee")
                     ],
                 ],
             )
@@ -155,9 +155,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def rip(event):
         chat_m = await event.get_chat()
         him_id = event.query.user_id
-        await event.edit("Choice Accepted ✔️")
+        await event.edit("Requested ✔️")
         text2 = (
-            "Ok. Please wait until Ryujin approves. Don't spam or try anything. Thank you for contacting Me."
+            "Okay! Wait ka lang dyan,rereplyan din kita agad. 🚫 Spam = Block 🚫"
         )
         await borg.send_message(event.query.user_id, text2)
         await tgbot.send_message(LOG_CHAT, message=f"Hello, A [New User](tg://user?id={him_id}). Wants To Talk With You.",
@@ -169,11 +169,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                                 )
                                 
 
-    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"askme")))
+    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"wwjollibee")))
     async def rip(event):
         chat_s = await event.get_chat()
-        await event.edit("Choice Accepted ✔️")
-        text3 = "Ok, wait. You can ask after Ryujin approves You. Please wait."
+        await event.edit("✅ Grouplink: t.me/wwjollibee ")
+        text3 = "Click the link above to join."
         await borg.send_message(event.query.user_id, text3)
 
 
