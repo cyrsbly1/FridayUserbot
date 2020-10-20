@@ -1,6 +1,6 @@
 """Make / Download Telegram Sticker Packs without installing Third Party applications
 Available Commands:
-.kang [Optional Emoji]
+.steal [Optional Emoji]
 .packinfo
 .getsticker"""
 import asyncio
@@ -29,7 +29,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Who is this"
 FILLED_UP_DADDY = "Invalid pack selected."
 
 
-@friday.on(friday_on_cmd(pattern="kang ?(.*)"))
+@friday.on(friday_on_cmd(pattern="steal ?(.*)"))
 @friday.on(sudo_cmd(pattern="kang ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
