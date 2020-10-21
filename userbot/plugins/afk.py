@@ -154,7 +154,6 @@ async def on_afk(event):
         msg = None
         message_to_reply = (
             f"**Jon Iriz is AFK since:** `{total_afk_time}`\n**Jon Iriz** : `{reason}`"
-            + f"\n#Inactive"
             if reason
             else f"**Jon Iriz is AFK**\n AFK since: `{total_afk_time}`"
         )
