@@ -31,7 +31,7 @@ USER_BOT_WARN_ZERO = "🚫 You have attempted to spam Master's inbox, so inorder
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
     "**Hello, This is Ryujin's PM Protection Service 👌**\n\n"
-    "**I request you to choose a reason you have came for** 👀 \n\n"
+    "To avoid spam. i request you to choose a reason you have came for. \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**")
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -50,7 +50,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 if chat.id in PREV_REPLY_MESSAGE:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
-                pmpermit_sql.approve(chat.id, "Approved Another Nibba")
+                pmpermit_sql.approve(chat.id, "Approved")
                 await event.edit("Approved to pm [{}](tg://user?id={})".format(
                     firstname, chat.id))
                 await asyncio.sleep(3)
