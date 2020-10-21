@@ -45,10 +45,10 @@ async def _(event):
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"**Ryujin is AFK. 👀.**"
+                event.chat_id, f"**Jon Iriz is AFK. 👀.**"
             )
         else:
-            await borg.send_message(event.chat_id, f"**Ryujin is now AFK!**.")
+            await borg.send_message(event.chat_id, f"**Jon Iriz is now AFK!**.")
         await asyncio.sleep(5)
         await event.delete()
         try:
@@ -75,7 +75,7 @@ async def set_not_afk(event):
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         shite = await borg.send_message(
             event.chat_id,
-            "__Ryujin is now Online__\n `AFK for:``"
+            "__Jon Iriz is now Online__\n `AFK for:``"
             + total_afk_time
             + "`",
         )
@@ -153,10 +153,10 @@ async def on_afk(event):
                 f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = (
-            f"**Ryujin is AFK since:** `{total_afk_time}`\n**Reason** : `{reason}`"
+            f"**Jon Iriz is AFK since:** `{total_afk_time}`\n**Reason** : `{reason}`"
             + f"\n\nQuote for today: 2020 na, ang bobo pa din ni  Cy"
             if reason
-            else f"**Ryujin is AFK**\n AFK since: `{total_afk_time}`"
+            else f"**Jon Iriz is AFK**\n AFK since: `{total_afk_time}`"
         )
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
