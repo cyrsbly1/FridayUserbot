@@ -53,8 +53,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 text=query,
                 buttons=[
                     [
-                        custom.Button.inline("⬇️ RYUJIN'S USERBOT ⬇️ ",
-                                             data="-")
+                        Button.url(
+                            "WW Jollibee",
+                            "https://t.me/wwjollibee")
                     ],
                     [
                         custom.Button.inline(
@@ -62,8 +63,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                             data="whattalk")
                     ],
                     [
-                        custom.Button.inline("Join Werewolf Jollibee",
-                                             data="wwjollibee")
+                        Button.url(
+                            "WW Jollibee Dumps",
+                            "https://t.me/wwjollibeedumps")
                     ],
                 ],
             )
@@ -157,7 +159,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         him_id = event.query.user_id
         await event.edit("Requested ✔️")
         text2 = (
-            "Okay! Wait ka lang dyan,rereplyan din kita agad. 🚫 Spam = Block 🚫"
+            "Requested, please wait..."
         )
         await borg.send_message(event.query.user_id, text2)
         await tgbot.send_message(LOG_CHAT, message=f"Hello, A [New User](tg://user?id={him_id}). Wants To Talk With You.",
