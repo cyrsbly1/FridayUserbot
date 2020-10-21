@@ -45,7 +45,7 @@ async def _(event):
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"**Ryujin is afk. 👀.** \n__Because Of__ `{reason}`"
+                event.chat_id, f"**Ryujin is AFK. 👀.** \nReason: `{reason}`"
             )
         else:
             await borg.send_message(event.chat_id, f"**Ryujin is now AFK!**.")
@@ -153,8 +153,8 @@ async def on_afk(event):
                 f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = (
-            f"**Ryujin is AFK. **  \n**AFKT** : `{total_afk_time}`\n**Reason** : `{reason}`"
-            + f"\n\n #StreamNotShy!"
+            f"**Ryujin is AFK since:** `{total_afk_time}`\n**Reason** : `{reason}`"
+            + f"\n\n#StreamNotShy!"
             if reason
             else f"**Ryujin is AFK**\n AFK since: `{total_afk_time}`"
         )
