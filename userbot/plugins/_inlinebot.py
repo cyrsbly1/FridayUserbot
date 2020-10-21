@@ -36,7 +36,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         if event.query.user_id == bot.uid and query == "stats":
             result = builder.article(
                 title="Stats",
-                text=f"**Showing Stats For {DEFAULTUSER}'s Friday** \nNote --> Only Owner Can Check This \n(C) @FridayOT",
+                text=f"**Showing stats for {DEFAULTUSER}** \nNote --> Only owner can check this \n(C) @JonIriz",
                 buttons=[
                     [custom.Button.inline("Show Stats ", data="terminator")],
                     [
@@ -54,18 +54,15 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 buttons=[
                     [
                         Button.url(
-                            "WW Jollibee",
-                            "https://t.me/wwjollibee")
+                            "COVID-19 Updates 🇵🇭",
+                            "https://t.me/phcoronavirus")
                     ],
                     [
                         custom.Button.inline(
-                            "🛡️ Talk to Ryujin 🛡️",
+                            "Talk to Jon Iriz",
                             data="whattalk")
                     ],
-                    [
-                        Button.url(
-                            "WW Jollibee Dumps",
-                            "https://t.me/wwjollibeedumps")
+                    
                     ],
                 ],
             )
