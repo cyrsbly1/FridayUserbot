@@ -35,11 +35,11 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.utils import friday_on_cmd, errors_handler, register, sudo_cmd
 
 # =================== CONSTANT ===================
-PP_TOO_SMOL = "`The image is too small`"
+PP_TOO_SMOL = "**The image is too small** like my pp. 🤭"
 PP_ERROR = "`Failure while processing the image`"
-NO_ADMIN = "`I am not an admin nub nibba!`"
+NO_ADMIN = "`I am not an admin!`"
 NO_PERM = (
-    "`I don't have sufficient permissions! This is so sed. Alexa play Tera Baap Aaya`"
+    "`I don't have sufficient permissions! This is so s4d. Alexa play Kabet by Gagong Rapper.`"
 )
 NO_SQL = "`Running on Non-SQL mode!`"
 
