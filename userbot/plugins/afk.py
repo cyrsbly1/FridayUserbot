@@ -45,7 +45,7 @@ async def _(event):
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"**Ryujin is AFK. 👀.** \nReason: `{reason}`"
+                event.chat_id, f"**Ryujin is AFK. 👀.**"
             )
         else:
             await borg.send_message(event.chat_id, f"**Ryujin is now AFK!**.")
@@ -75,7 +75,7 @@ async def set_not_afk(event):
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         shite = await borg.send_message(
             event.chat_id,
-            "__Ryujin is Back Alive__\n**No Longer afk.**\n `I Was afk for:``"
+            "__Ryujin is now Online__\n `AFK for:``"
             + total_afk_time
             + "`",
         )
