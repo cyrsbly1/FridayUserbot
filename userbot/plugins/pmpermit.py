@@ -25,12 +25,12 @@ PM_ON_OFF = Config.PM_DATA
 DEFAULTUSER = (str(ALIVE_NAME)
                if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku")
 CUSTOM_MIDDLE_PMP = (str(CUSTOM_PMPERMIT)
-                     if CUSTOM_PMPERMIT else "Protection By Ryujin's Userbot 🇮👌")
+                     if CUSTOM_PMPERMIT else "Protection By Jon Iriz's Userbot 🇮👌")
 USER_BOT_WARN_ZERO = "🚫 You have attempted to spam Master's inbox, so inorder to avoid over spam, **You have been BLOCKED by Userbot**"
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
-    "**Hello, This is Ryujin's PM Protection Service 👌**\n\n"
+    "**Hello, This is Jon Iriz's PM Protection Service 👌**\n\n"
     "To avoid spam. i request you to choose a reason you have came for. \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**")
 
@@ -51,10 +51,9 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, "Approved")
-                await event.edit("Approved to pm [{}](tg://user?id={})".format(
+                await event.edit("✅ Jon Iriz accepted your request. Start a conversation.".format(
                     firstname, chat.id))
                 await asyncio.sleep(3)
-                await event.delete()
 
     @command(pattern=".block$")
     async def approve_p_m(event):
@@ -71,7 +70,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
-    @command(pattern="^.da$")
+    @command(pattern="^.d$")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -82,9 +81,8 @@ if Var.PRIVATE_GROUP_ID is not None:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
                 await event.edit(
-                    "Disapproved User [{}](tg://user?id={})".format(
+                    "❌ Jon Iriz rejected your request.".format(
                         firstname, chat.id))
-                await event.delete()
 
     @command(pattern="^.listapproved$")
     async def approve_p_m(event):
