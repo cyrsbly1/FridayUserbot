@@ -54,11 +54,11 @@ async def gspider(userbot):
     sender = await lol.get_sender()
     me = await lol.client.get_me()
     if not sender.id == me.id:
-        friday = await lol.reply("Gbanning This User!")
+        friday = await lol.reply("Gbanning...")
     else:
-        friday = await lol.edit("Wait Processing.....")
+        friday = await lol.edit("Wait processing.....")
     me = await userbot.client.get_me()
-    await friday.edit(f"Global Ban is coming. Please wait...")
+    await friday.edit(f"Global Banning, pleasewait...")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -99,7 +99,7 @@ async def gspider(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await friday.edit(f"**GBANNED // Total Affected Chats **: `{a}`")
+                await friday.edit(f"**GBANNED // Total Affected  **: `{a}` Chats")
             except:
                 b += 1
     else:
