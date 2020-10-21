@@ -19,7 +19,7 @@ async def selfdestruct(destroy):
         text = str(destroy.text[6:])
         text = (
             text
-            + "\n\n`This message shall be self-destructed in "
+            + "\n\n`⌛ This message shall be self-destructed in "
             + str(counter)
             + " seconds`"
         )
