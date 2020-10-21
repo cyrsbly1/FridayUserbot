@@ -154,7 +154,7 @@ async def on_afk(event):
         msg = None
         message_to_reply = (
             f"**Ryujin is AFK since:** `{total_afk_time}`\n**Reason** : `{reason}`"
-            + f"\n\n#StreamNotShy!"
+            + f"\n\nQuote for today: 2020 na, ang bobo pa din ni  Cy"
             if reason
             else f"**Ryujin is AFK**\n AFK since: `{total_afk_time}`"
         )
