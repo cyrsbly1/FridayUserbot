@@ -30,8 +30,8 @@ USER_BOT_WARN_ZERO = "🚫 You have attempted to spam Master's inbox, so inorder
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
-    "**Hello, This is Jon Iriz's PM Protection Service 👌**\n\n"
-    "To avoid spam. i request you to choose a reason you have came for. \n\n"
+    "**Hello, This is Jon Iriz's Userbot .**\n\n"
+    "To avoid spam.  click the button below to continue.. \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**")
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -55,7 +55,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     firstname, chat.id))
                 await asyncio.sleep(3)
 
-    @command(pattern=".block$")
+    @command(pattern=".b$")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -65,7 +65,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("Blocked [{}](tg://user?id={})".format(
+                await event.edit("❌ Jon Iriz rejected your request.".format(
                     firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
@@ -81,7 +81,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
                 await event.edit(
-                    "❌ Jon Iriz rejected your request.".format(
+                    "❌  **Jon Iriz closed the conversation.** Thank you!".format(
                         firstname, chat.id))
 
     @command(pattern="^.listapproved$")
