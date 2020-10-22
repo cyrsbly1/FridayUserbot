@@ -14,7 +14,7 @@ GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 @friday.on(friday_on_cmd(outgoing=True, pattern="lyrics (.*)"))
 @friday.on(sudo_cmd(pattern="lyrics (.*)", allow_sudo=True))
 async def _(event):
-    await edit_or_reply(event, "Searching For Lyrics.....")
+    await edit_or_reply(event, "🌀 Searching for lyrics...")
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
@@ -24,7 +24,7 @@ async def _(event):
     elif reply.text:
         query = reply.message
     else:
-        await edit_or_reply(event, "`What I am Supposed to find `")
+        await edit_or_reply(event, "`❓Di kita gets beh, anong song title ba?`")
         return
 
     song = ""
@@ -33,9 +33,9 @@ async def _(event):
         if song.lyrics:
             reply = song.format()
         else:
-            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
+            reply = "❌ Couldn't find any lyrics for that song!"
     else:
-        reply = "lyrics not found! try with artist name along with song if still doesnt work try `.glyrics`"
+        reply = "❌ Lyrics not found!"
 
     if len(reply) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(reply)) as out_file:
