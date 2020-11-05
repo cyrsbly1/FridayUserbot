@@ -25,18 +25,18 @@ PM_ON_OFF = Config.PM_DATA
 DEFAULTUSER = (str(ALIVE_NAME)
                if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku")
 CUSTOM_MIDDLE_PMP = (str(CUSTOM_PMPERMIT)
-                     if CUSTOM_PMPERMIT else "Protection By Jon Iriz's Userbot 🇮👌")
+                     if CUSTOM_PMPERMIT else "Made with 💜 by @seantristan.")
 USER_BOT_WARN_ZERO = "🚫 You have attempted to spam Master's inbox, so inorder to avoid over spam, **You have been BLOCKED by Userbot**"
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
-    "**Hello, This is Jon Iriz's Userbot .**\n\n"
-    "To avoid spam.  click the button below to continue.. \n\n"
+    "**Hello, This is @WWJollibee Help Desk Userbot .**\n\n"
+    "☑️ **You have sent a request.** Please wait for an admin to accept it. \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**")
 
 if Var.PRIVATE_GROUP_ID is not None:
 
-    @command(pattern="^.a$")
+    @command(pattern="^.o$")
     async def block(event):
         if event.fwd_from:
             return
@@ -51,9 +51,10 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, "Approved")
-                await event.edit("✅ Jon Iriz accepted your request. Start a conversation.".format(
+                await event.edit("✅ **An admin has accepted your request.** Start your conversation.".format(
                     firstname, chat.id))
-                await asyncio.sleep(3)
+                await asyncio.sleep(300) 
+                await event.delete()
 
     @command(pattern=".b$")
     async def approve_p_m(event):
@@ -65,12 +66,12 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("❌ Jon Iriz rejected your request.".format(
+                await event.edit("❌ You have been blocked by an admin.".format(
                     firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
-    @command(pattern="^.d$")
+    @command(pattern="^.c$")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -81,7 +82,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
                 await event.edit(
-                    "❌  **Jon Iriz closed the conversation.** Thank you!".format(
+                    "❎ **The chat has been closed by an admin.** Thank you!".format(
                         firstname, chat.id))
 
     @command(pattern="^.listapproved$")
