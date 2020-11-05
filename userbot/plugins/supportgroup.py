@@ -18,10 +18,10 @@ async def _(event):
     animation_ttl = range(0, 36)
     # input_str = event.pattern_match.group(1)
     # if input_str == "support":
-    await event.edit("for our support group")
+    await event.edit("For Main Grouplink")
     animation_chars = [
         "Click here",
-        "[Support Group](https://t.me/FRIDAYSUPPORTOFFICIAL)",
+        "[Main Group](https://t.me/wwjollibee)",
     ]
 
     for i in animation_ttl:
