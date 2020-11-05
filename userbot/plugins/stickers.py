@@ -42,7 +42,7 @@ async def _(event):
     input_str = event.pattern_match.group(1)
     if input_str:
         sticker_emoji = input_str
-    moods = await edit_or_reply(event, "`Hello, This Sticker Looks Noice. Mind if I steal it`")
+    moods = await edit_or_reply(event, "`Processing..`")
     user = await bot.get_me()
     if not user.username:
         user.username = user.id
@@ -56,7 +56,7 @@ async def _(event):
     else:
         packname = f"@{user.username} KangPack {pack}"
         packshortname = f"FRIDAY_{userid}_Pack"
-    await moods.edit("`This Sticker is Gonna Get Stolen.....`")
+    await moods.edit("`Processing..`")
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "Ryujin.png"
@@ -82,7 +82,7 @@ async def _(event):
                 sticker, file_name=file_ext_ns_ion
             )
 
-    await moods.edit("`Inviting This Sticker To Your Pack 🚶`")
+    await moods.edit("`Processing..`")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
