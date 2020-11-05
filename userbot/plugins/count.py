@@ -56,7 +56,7 @@ async def stats(
     event: NewMessage.Event,
 ) -> None:  # pylint: disable = R0912, R0914, R0915
     """Command to get stats about the account"""
-    await event.edit("`Collecting stats, Wait Master`")
+    await event.edit("`Collecting stats... Please wait.`")
     start_time = time.time()
     private_chats = 0
     bots = 0
