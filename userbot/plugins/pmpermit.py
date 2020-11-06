@@ -13,7 +13,7 @@ from userbot.uniborgConfig import Config
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
-    WARN_PIC = "https://telegra.ph/file/d0178280db7afaa146f5f.jpg"
+    WARN_PIC = "https://telegra.ph/file/f58a45c39070bd76dcceb.jpg"
 else:
     WARN_PIC = PMPERMIT_PIC
 
