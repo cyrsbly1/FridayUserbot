@@ -50,7 +50,7 @@ async def start(event):
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
     vent = event.chat_id
-    starttext = (f"Hello, {firstname}, I'm [➤ Master](tg://user?id={bot.uid})'s Bot. \nYou can us by clicking the button below.")
+    starttext = (f"Hello, {firstname}, I'm [WW JOLLIBEE HELP DESK](tg://user?id={bot.uid})'s Bot. \nYou can contact us by clicking the button below.")
     if event.sender_id == bot.uid:
         await tgbot.send_message(
            vent,
