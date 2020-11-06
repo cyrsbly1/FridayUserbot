@@ -20,8 +20,8 @@ async def _(event):
     # if input_str == "support":
     await event.edit("For Main Grouplink")
     animation_chars = [
-        "Click here",
-        "[Main Group](https://t.me/wwjollibee)",
+        "Follow our Channel",
+        "Bago namin i-promote ang inyong channel/link. I-follow muna ang https://t.me/promotelinksph.)",
     ]
 
     for i in animation_ttl:
