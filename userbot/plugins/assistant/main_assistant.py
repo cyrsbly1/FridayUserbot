@@ -50,7 +50,7 @@ async def start(event):
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
     vent = event.chat_id
-    starttext = (f"Hello, {firstname} ! Nice To Meet You, Well I Am {bot_id}, An Powerfull Assistant Bot. \n\nMy [➤ Master](tg://user?id={bot.uid}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [Friday Userbot](t.me/FridayOT)")
+    starttext = (f"Hello, {firstname}, I'm [➤ Master](tg://user?id={bot.uid})'s Bot. \nYou can us by clicking the button below.")
     if event.sender_id == bot.uid:
         await tgbot.send_message(
            vent,
@@ -73,8 +73,7 @@ async def start(event):
            message=starttext,
            link_preview=False,
            buttons = [
-           [custom.Button.inline("Deploy your Friday 🇮🇳", data="deploy")],
-           [Button.url("Help Me ❓", "t.me/Fridayot")]
+           [Button.url("Contact Us", "t.me/wwjollibeehelpdesk")]
        ]
       )
 
@@ -214,8 +213,8 @@ async def starkisnoob(event):
         add_nibba_in_db(
             user_id
           )
-        await event.reply("Blacklisted This Dumb Person")
-        await tgbot.send_message(user_id, "You Have Been Blacklisted And You Can't Message My Master Now.")
+        await event.reply("Blacklisted.")
+        await tgbot.send_message(user_id, "🚫 You have been blocked by an admin.")
 
 @tgbot.on(events.NewMessage(pattern="^/unblock ?(.*)", func=lambda e: e.sender_id == bot.uid))
 async def starkisnoob(event):
@@ -232,5 +231,5 @@ async def starkisnoob(event):
         removenibba(
             user_id
           )
-        await event.reply("DisBlacklisted This Dumb Person")
-        await tgbot.send_message(user_id, "Congo! You Have Been Unblacklisted By My Master.")
+        await event.reply("✅ Unblocked")
+        await tgbot.send_message(user_id, "✅ You have been unblocked by an admin.")
