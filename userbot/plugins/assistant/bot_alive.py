@@ -46,11 +46,9 @@ pm_caption += "➥ **Python:** `3.7.4` \n"
 pm_caption += "➥ **Database Status:**  `Functional`\n"
 pm_caption += "➥ **Current Branch** : `master`\n"
 pm_caption += f"➥ **Version** : `{currentversion}`\n"
-pm_caption += f"➥ **My Boss** : {DEFAULTUSER} \n"
+pm_caption += f"➥ **Owner** : @wwjollibee / @seantristan \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
-pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n"
-pm_caption += "➥ **Copyright** : By [StarkGang@Github](GitHub.com/StarkGang)\n"
-pm_caption += "[Assistant By Friday 🇮🇳](https://telegra.ph/FRIDAY-06-15)"
+pm_caption += "➥ **Copyright** : StarkGang"
 
 # only Owner Can Use it 
 @tgbot.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))
