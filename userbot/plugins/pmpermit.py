@@ -25,14 +25,14 @@ PM_ON_OFF = Config.PM_DATA
 DEFAULTUSER = (str(ALIVE_NAME)
                if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku")
 CUSTOM_MIDDLE_PMP = (str(CUSTOM_PMPERMIT)
-                     if CUSTOM_PMPERMIT else "Made with 💜 by @promotelinksph")
+                     if CUSTOM_PMPERMIT else "Please follow our channel before sending your link. @promotelinksph")
 USER_BOT_WARN_ZERO = "🚫 You have attempted to spam our inbox, so inorder to avoid over spam, **You have been BLOCKED by Userbot**"
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
     "**Hello, This is PROMOTE LINKS 🇵🇭 Userbot.**\n\n"
     "☑️ **You have sent a request.** Please wait for an admin to accept it. \n\n"
-    f"**{CUSTOM_MIDDLE_PMP}**")
+    f"__{CUSTOM_MIDDLE_PMP}__")
 
 if Var.PRIVATE_GROUP_ID is not None:
 
@@ -51,7 +51,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, "Approved")
-                await event.edit("✅ **An admin has accepted your request.** Start your conversation. \n 🛈 Note: __Please follow @promotelinksph before sending your link__".format(
+                await event.edit("✅ **An admin has accepted your request.** Start your conversation.".format(
                     firstname, chat.id))
                 await asyncio.sleep(300) 
                 await event.delete()
