@@ -45,7 +45,7 @@ pm_caption += "➥ **Python:** `3.7.4` \n"
 pm_caption += "➥ **Database Status:**  `Functional`\n"
 pm_caption += "➥ **Current Branch** : `master`\n"
 pm_caption += f"➥ **Version** : `{currentversion}`\n"
-pm_caption += f"➥ **Owner** : @wwjollibee / @seantristan \n"
+pm_caption += f"➥ **Owner** : @promotelinksph \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
 pm_caption += "➥ **Copyright** : StarkGang"
 
