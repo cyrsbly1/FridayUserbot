@@ -51,7 +51,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, "Approved")
-                await event.edit("✅ **An admin has accepted your request.** Start your conversation.".format(
+                await event.edit("✅ **An admin has accepted your request.** Start your conversation. \n 🛈 Note: __Please follow @promotelinksph before sending your link__".format(
                     firstname, chat.id))
                 await asyncio.sleep(300) 
                 await event.delete()
