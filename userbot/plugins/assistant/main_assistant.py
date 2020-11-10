@@ -50,7 +50,7 @@ async def start(event):
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
     vent = event.chat_id
-    starttext = (f"Hello, {firstname}, I'm [WW JOLLIBEE HELP DESK](tg://user?id={bot.uid})'s Bot. \nYou can contact us by clicking the button below.")
+    starttext = (f"Hello, {firstname}, I'm [Promote Links 🇵🇭](tg://user?id={bot.uid})'s Bot. \n You can send your link here or contact us by clicking the button below.")
     if event.sender_id == bot.uid:
         await tgbot.send_message(
            vent,
@@ -73,7 +73,8 @@ async def start(event):
            message=starttext,
            link_preview=False,
            buttons = [
-           [Button.url("Contact Us", "t.me/wwjollibeehelpdesk")]
+           [Button.url("Contact Us", "t.me/promotelinksphUB")]
+           [Button.url("Join Werewelcome to Jollibee Group", "t.me/wwjollibe")]
        ]
       )
 
