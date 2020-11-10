@@ -74,7 +74,6 @@ async def start(event):
            link_preview=False,
            buttons = [
            [Button.url("Contact Us", "t.me/promotelinksphUB")]
-           [Button.url("Join Werewelcome to Jollibee Group", "t.me/wwjollibe")]
        ]
       )
 
