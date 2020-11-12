@@ -54,7 +54,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 buttons=[
                     [
                         Button.url(
-                            "CLICK HERE TO SUBMIT YOUR LINK",
+                            "➡️ CLICK HERE TO CONTINUE ⬅️",
                             "https://t.me/ppromotelinksbot")
                     ],
                     [
