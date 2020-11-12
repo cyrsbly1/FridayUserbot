@@ -54,13 +54,13 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 buttons=[
                     [
                         Button.url(
-                            "JOIN WEREWELCOME TO JOLLIBEE",
-                            "https://t.me/wwjollibee")
+                            "CLICK HERE TO SUBMIT YOUR LINK",
+                            "https://t.me/ppromotelinksbot")
                     ],
                     [
                         Button.url(
                             "FOLLOW OUR CHANNEL HERE",
-                            "https://t.me/promotelinksphbot")
+                            "https://t.me/promotelinksph")
                     ],
                 ],
             )
