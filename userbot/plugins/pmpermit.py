@@ -25,13 +25,13 @@ PM_ON_OFF = Config.PM_DATA
 DEFAULTUSER = (str(ALIVE_NAME)
                if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku")
 CUSTOM_MIDDLE_PMP = (str(CUSTOM_PMPERMIT)
-                     if CUSTOM_PMPERMIT else "__Message from @promotelinksph__")
+                     if CUSTOM_PMPERMIT else "__Advisory from @promotelinksph__")
 USER_BOT_WARN_ZERO = "🚫 You have attempted to spam our inbox, so inorder to avoid over spam, **You have been BLOCKED by Userbot**"
 
 botisnoob = Var.TG_BOT_USER_NAME_BF_HER
 USER_BOT_NO_WARN = (
     "**Hello, This is PROMOTE LINKS 🇵🇭 Userbot.**\n\n"
-    "⚠️ Please proceed to @ppromotelinksbot or click the button below.\n\n"
+    "⚠️ Please proceed to @ppromotelinksbot or click the button below. \n\n"
     f"__{CUSTOM_MIDDLE_PMP}__")
 
 if Var.PRIVATE_GROUP_ID is not None:
